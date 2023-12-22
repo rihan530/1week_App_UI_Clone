@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="치지직"
+        android:icon="@drawable/ico_tabbar_streaming_default"
+        android:state_checked="false"/>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_home_fill"-->
+<!--        android:title="치지직"-->
+<!--        android:icon="@drawable/ico_tabbar_streaming_active"-->
+<!--        android:state_checked="true"/>-->
+
+    <item
+        android:id="@+id/menu_esports"
+        android:title="e스포츠"
+        android:icon="@drawable/ico_tabbar_esports_default"
+        android:state_checked="false"/>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_esports_fill"-->
+<!--        android:title="e스포츠"-->
+<!--        android:icon="@drawable/ico_tabbar_esports_active"-->
+<!--        android:state_checked="true"/>-->
+
+    <item
+        android:id="@+id/menu_lounge"
+        android:title="라운지"
+        android:icon="@drawable/ico_tabbar_lounge_default"
+        android:state_checked="false"/>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_lounge_fill"-->
+<!--        android:title="라운지"-->
+<!--        android:icon="@drawable/ico_tabbar_lounge_active"-->
+<!--        android:state_checked="true"/>-->
+
+    <item
+        android:id="@+id/menu_original"
+        android:title="오리지널"
+        android:icon="@drawable/ico_tabbar_original_default"
+        android:state_checked="false"/>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_original_fill"-->
+<!--        android:title="오리지널"-->
+<!--        android:icon="@drawable/ico_tabbar_original_active"-->
+<!--        android:state_checked="true"/>-->
+
+    <item
+        android:id="@+id/menu_noti"
+        android:title="새소식"
+        android:icon="@drawable/ico_tabbar_noti_default"
+        android:state_checked="false"/>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_noti_fill"-->
+<!--        android:title="새소식"-->
+<!--        android:icon="@drawable/ico_tabbar_noti_active"-->
+<!--        android:state_checked="true"/>-->
+
+</menu>

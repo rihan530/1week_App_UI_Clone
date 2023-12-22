@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <item
+        android:title="치지직">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_channel"
+                    android:icon="@drawable/img_profile_channel_gy_h27"
+                    android:title="내 채널"/>
+                <item
+                    android:id="@+id/nav_cheese"
+                    android:icon="@drawable/img_profile_money_gy_h27"
+                    android:title="내 치즈"/>
+                <item
+                    android:id="@+id/nav_recent"
+                    android:icon="@drawable/img_profile_recent_gy_h27"
+                    android:title="최근 시청 영상"/>
+                <item
+                    android:id="@+id/nav_follow"
+                    android:icon="@drawable/img_profile_follow_gy_h27"
+                    android:title="팔로우 채널"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:title="게임 라운지">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_join"
+                    android:icon="@drawable/img_profile_join_gy_h27"
+                    android:title="가입 라운지"/>
+                <item
+                    android:id="@+id/feed"
+                    android:icon="@drawable/img_profile_feed_gy_h27"
+                    android:title="작성한 글"/>
+                <item
+                    android:id="@+id/buff"
+                    android:icon="@drawable/img_profile_buff_gy_h27"
+                    android:title="버프/너프한 글"/>
+                <item
+                    android:id="@+id/nav_save"
+                    android:icon="@drawable/img_profile_save_gy_h27"
+                    android:title="저장한 글"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:title="e스포츠">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_predict"
+                    android:icon="@drawable/img_profile_predict_gy_h27"
+                    android:title="승부예측"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <group
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_comment"
+                    android:icon="@drawable/img_profile_comment_gy_h27"
+                    android:title="작성한 댓글"/>
+                <item
+                    android:id="@+id/nav_storage"
+                    android:icon="@drawable/img_profile_storage_gy_h27"
+                    android:title="당첨 보관함"/>
+                <item
+                    android:id="@+id/nav_original"
+                    android:icon="@drawable/img_profile_original_gy_h27"
+                    android:title="오리지널 시리즈"/>
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/img_profile_setting_gy_h27"
+                    android:title="설정"/>
+            </group>
+        </menu>
+    </item>
+</menu>

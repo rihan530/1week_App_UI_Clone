@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".HomeFragment"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fillViewport="true"-->
+<!--        android:scrollbars="none">-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/chzzk_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/iv_logo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/iv_search"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/btn_gnb_search_wt" />
+
+                        <ImageButton
+                            android:id="@+id/iv_profile"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/img_profile_default"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:src="@drawable/small_circle" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edge"
+                    android:src="@drawable/beta_banner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/big_thumbnail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/thumbnail_edge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.461"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/banner">
+
+                    <ImageView
+                        android:id="@+id/thumbnailImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="230dp"
+                        android:background="@color/background"
+                        android:src="@drawable/thumbnail_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/grey"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/playerImage"
+                        app:layout_constraintTop_toTopOf="@id/playerImage"
+                        android:text="슬럼프 극복해보자" />
+
+                    <TextView
+                        android:id="@+id/idTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/titleTextView"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/titleTextView"
+                        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+                        android:text="진짜도현" />
+
+                    <TextView
+                        android:id="@+id/gameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="250dp"
+                        android:background="@drawable/game_shape"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true"
+                        android:textColor="#BDB8B8"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/titleTextView"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/titleTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/idTextView"
+                        android:text="리그 오브 레전드" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/playerImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="16dp"
+                        app:civ_border_overlay="true"
+                        app:civ_border_width="3dp"
+                        app:civ_border_color="#4CAF50"
+                        android:src="@drawable/profile_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/thumbnailImageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/big_thumbnail">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+                        android:text="추천"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="전체보기"
+                        android:textColor="#A4A2A2"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <ListView-->
+        <!--            android:id="@+id/list"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/recommend">-->
+
+
+        <!--        </ListView>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recommend"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        </ScrollView>-->
+
+</ScrollView>

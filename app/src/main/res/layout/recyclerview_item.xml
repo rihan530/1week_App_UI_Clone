@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="8dp">
+
+    <!--  리스트뷰 순서 표시할 TextView  -->
+    <ImageView
+        android:id="@+id/rv_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_weight="1"
+        android:src="@drawable/thumbnail_1"
+        android:background="@drawable/thumbnail_edge"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="제목"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/rv_playerImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/big_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_title" />
+
+
+        <TextView
+            android:id="@+id/rv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+            android:text="아이디"
+            android:textColor="#ADABAB"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/rv_playerImage"
+            app:layout_constraintTop_toBottomOf="@+id/rv_title" />
+
+        <TextView
+            android:id="@+id/rv_gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="4dp"
+            android:background="@drawable/game_shape"
+            android:ellipsize="end"
+            android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="게임"
+            android:textColor="#BDB8B8"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_playerImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="10dp"
+    android:orientation="horizontal">
+
+    <!--  리스트뷰 순서 표시할 TextView  -->
+    <ImageView
+        android:id="@+id/lv_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_weight="1"
+        android:src="@drawable/thumbnail_1"
+        android:background="@drawable/thumbnail_edge"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="제목"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="29dp">
+
+            <ImageView
+                android:id="@+id/lv_playerImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/big_circle"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/lv_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="아이디"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lv_playerImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lv_gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:background="@drawable/game_shape"
+            android:ellipsize="end"
+            android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="리그 오브 레전드"
+            android:textColor="#BDB8B8"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

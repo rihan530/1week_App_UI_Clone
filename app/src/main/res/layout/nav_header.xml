@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:gravity="bottom"
+    android:padding="16dp"
+    android:id="@+id/nav_header"
+    android:background="@color/background"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/img_profile_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/profile_edge"
+        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+        android:padding="5dp"
+        android:text="게임"
+        android:textColor="@color/purple"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+        android:text="닉네임"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView" />
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="centerCrop"
+        android:padding="0dp"
+        android:background="@color/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ico_bottom_sheet_topbar_close_gy_h20" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+        android:text="내정보"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_profile_setting_gy_h27" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
