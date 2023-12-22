@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -57,9 +58,38 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.bottomNavi
     }
 
+    private val callbackTwo = object : OnBackPressedCallback(
+        true
+    ) {
+        override fun handleOnBackPressed() {
+            Log.d(TAG, "handleOnBackPressed: Two")
+        }
+    }
+
+    private val callbackThree = object :OnBackPressedCallback(
+        true
+    ) {
+        override fun handleOnBackPressed() {
+            Log.d(TAG, "handleOnBackPressed: Three")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        this.onBackPressedDispatcher.addCallback(this,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    Log.d(TAG, "handleOnBackPressed: One")
+                }
+            })
+        this.onBackPressedDispatcher.addCallback(this,
+            callbackTwo)
+        this.onBackPressedDispatcher.addCallback(this,
+            callbackThree)
+
+        callbackThree.isEnabled = false
 
         supportFragmentManager.beginTransaction().add(R.id.framelayout, HomeFragment()).commit()
 
@@ -160,14 +190,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
-    }
+
 
 
 }

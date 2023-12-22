@@ -3,10 +3,15 @@ package com.example.appui_clone
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.widget.TextView
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import de.hdodenhof.circleimageview.CircleImageView
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -20,7 +25,6 @@ class ChannelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_channel)
-
 
         val PERMISSION_Album = 101 // 앨범 권한 처리
 

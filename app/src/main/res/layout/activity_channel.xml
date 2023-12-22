@@ -12,10 +12,10 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="592dp"
+        android:layout_marginTop="60dp"
         android:src="@drawable/img_profile_default"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/backBtn"
@@ -67,23 +67,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ico_option_h21" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/manage"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_mypage"
-        android:drawableLeft="@drawable/settimg_resize"
-        android:drawablePadding="-150dp"
-        android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
-        android:paddingLeft="150dp"
-        android:text="채널관리"
-        android:textColor="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myImage" />
+        app:layout_constraintTop_toBottomOf="@+id/myImage">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:drawableRight="@drawable/settimg_resize"/>
+
+        <TextView
+            android:id="@+id/manage"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/sdnemony2_ttf_dbasicbd"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="채널관리"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
