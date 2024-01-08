@@ -2,6 +2,7 @@ package com.example.appui_clone
 
 
 
+import android.graphics.drawable.StateListDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -12,7 +13,6 @@ import android.widget.TextView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appui_clone.databinding.FragmentHomeBinding
@@ -31,6 +31,7 @@ class HomeFragment : Fragment(){
     }
 
     private var streamList = ArrayList<StreamInfo>()
+    private var streamerList = ArrayList<StreamerInfo>()
     private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
     lateinit var profileFragment: ProfileFragment
@@ -53,13 +54,30 @@ class HomeFragment : Fragment(){
             add(StreamInfo("도현팀 원딜 vs 악어", "따효니 DDaHyoNi", "리그 오브 레전드", R.drawable.thumbnail_6, R.drawable.profile_6))
         }
 
+        streamerList.apply {
+            add(StreamerInfo("김도 KimDoe", R.drawable.streamer_profile_1, true))
+            add(StreamerInfo("햇살살", R.drawable.streamer_profile_2, true))
+            add(StreamerInfo("남궁혁", R.drawable.streamer_profile_3, true))
+            add(StreamerInfo("찐자동", R.drawable.streamer_profile_4, false))
+            add(StreamerInfo("루 다", R.drawable.streamer_profile_5, false))
+            add(StreamerInfo("나는미도", R.drawable.streamer_profile_6, false))
+            add(StreamerInfo("린희", R.drawable.streamer_profile_anonymous, false))
+            add(StreamerInfo("김나성", R.drawable.streamer_profile_7, false))
+            add(StreamerInfo("연두는말안드뤄", R.drawable.streamer_profile_8, false))
+            add(StreamerInfo("소니소니쇼", R.drawable.streamer_profile_9, false))
+        }
+
         val rvAdapter = RVAdapter(streamList)
+        val rvFollowAdapter = RVFollowAdapter(streamerList)
 
         _binding!!.list.adapter = rvAdapter
 
         _binding!!.list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-//        val drawerLayout = view?.findViewById<DrawerLayout>(R.id.drawer_layout)
+        _binding!!.streamerList.adapter = rvFollowAdapter
+
+        _binding!!.streamerList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
         val navView: NavigationView? = view?.findViewById(R.id.nav_view)
 
         val view = binding.root
